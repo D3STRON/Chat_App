@@ -1,0 +1,14 @@
+<div>
+  <div id="mario-chat">
+            <h2>Mario Chat</h2>
+            <div id="chat-window">
+                <div id="output" ng-repeat="chat in chats | orderBy:'+':true">
+                 <p><strong>{{chat.handle}}</strong>: {{chat.message}}</p>
+                </div>
+            </div>
+            <input id="handle" type="text" placeholder="Handle" ng-model="handle"/>
+            <input id="message" type="text" placeholder="Message" ng-model="message"/>
+            <button id="send" ng-click="send()">Send</button>
+        </div>
+
+</div>
